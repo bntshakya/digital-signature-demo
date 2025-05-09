@@ -21,3 +21,6 @@ Route::get('/', function () {
 Route::post('/document/encrypt', [HashController::class, 'encrypt'])->name('document.encrypt');
 Route::post('/document/decrypt', [HashController::class, 'decrypt'])->name('document.decrypt');
 Route::post('/document/generateKeys',[HashController::class,'generateKeys'])->name('document.generate');
+Route::post('/document/make',[HashController::class,'makePdf'])->name('makePDF');
+Route::get('/document/pdf',[HashController::class,'viewPdf'])->name('viewPdf');
+Route::post('/document/hash',[HashController::class,'hash'])->name('hashpdf');
